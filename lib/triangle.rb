@@ -2,12 +2,12 @@ class Triangle
   # write code here
 attr_accessor :kind
 
-  def initialize (side_a,side_b,side_c)
-    if side_a * side_b * side_c == 0 then raise TriangleError
-    elsif side_a < 0 || side_b < 0 || side_c < 0 then raise TriangleError
-    elsif side_a + side_b <= side_c ||  side_c + side_b <= side_a || side_c + side_a <= side_b then raise TriangleError
-    elsif side_a == side_b && side_b == side_c then @kind = :equilateral
-    elsif side_a == side_b || side_b == side_c || side_a == side_c then @kind = :isosceles
+  def initialize (sideA,sideB,sideC)
+    if sideA * sideB * sideC == 0 then raise TriangleError
+    elsif sideA < 0 || sideB < 0 || sideC < 0 then raise TriangleError
+    elsif sideA + sideB <= sideC ||  sideC + sideB <= sideA || sideC + sideA <= sideB then raise TriangleError
+    elsif sideA == sideB && sideB == sideC then @kind = :equilateral
+    elsif sideA == sideB || sideB == sideC || sideA == sideC then @kind = :isosceles
     else @kind = :scalene
     end
 
